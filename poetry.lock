@@ -204,6 +204,31 @@ scanpy = ">=1.10.3"
 tqdm = ">=4.67.1"
 
 [[package]]
+name = "cell-eval2"
+version = "0.19.0"
+description = "Clean, streamlined, GPU-accelerated reimplementation of cell-eval"
+optional = false
+python-versions = ">=3.11"
+groups = ["main"]
+files = [
+    {file = "cell_eval2-0.19.0-py3-none-any.whl", hash = "sha256:d2ddbcb47f98db4f72f94c2c655433f47c25642b3ee0dcd4dc2fd7b6eb866476"},
+    {file = "cell_eval2-0.19.0.tar.gz", hash = "sha256:7017aaf3864abf51ed22f410d7403f138ff91eb2ef7c8cc346821255bf1db603"},
+]
+
+[package.dependencies]
+anndata = ">=0.10"
+numpy = ">=1.26"
+polars = ">=1.0"
+pyyaml = ">=6.0"
+scanpy = ">=1.10"
+scipy = ">=1.11"
+
+[package.extras]
+gpu = ["cupy-cuda12x", "nvidia-nvcomp-cu12"]
+gpudge = ["gpudge (>=0.9.0)"]
+scale = ["cellstream (>=0.9.1)", "pyarrow (>=15)"]
+
+[[package]]
 name = "certifi"
 version = "2026.10.19"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -5537,4 +5562,4 @@ remote = ["fsspec (>=2023.10.0)", "obstore (>=0.5.1)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.14"
-content-hash = "4859ed97bea3cc951a83f8295fb6a8c9ca497fc54e152254ed6d9860937bc217"
+content-hash = "3f097cab38ac029f4d0d6d7a88dcd5fd24c4b39a77a115f3a587ab9ed0f37f8d"

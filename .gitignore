@@ -224,3 +224,6 @@ __marimo__/
 
 # Datasets (download from Zenodo, see README)
 datasets/
+
+# Evaluation outputs
+results/

@@ -242,6 +242,7 @@ def compute_stats(totals: dict[str, np.ndarray], pert_names: list[str]) -> dict:
         "mean_log": mean_log,
         "mean_cp": mean_cp,
         "frac_expr": frac_expr,
+        "ctrl_var_log": var_log[0],
         "ref_cp": ref_cp,
         "delta": d,
         "log2fc": lfc,
@@ -295,6 +296,7 @@ def write_output(
     var = pd.DataFrame(
         {
             "ctrl_mean_log": stats["mean_log"][0],
+            "ctrl_var_log": stats["ctrl_var_log"],
             "ctrl_mean_cp10k": stats["mean_cp"][0],
             "ctrl_frac_expr": stats["frac_expr"][0],
         },
